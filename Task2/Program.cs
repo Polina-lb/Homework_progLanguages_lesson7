@@ -3,18 +3,19 @@
 
 int CalcAckermann(int n, int m)
 {
-    if (n==0)
+    if (n == 0)
     {
-        return m+1;
+        return m + 1;
     }
-    else if (m==0)
+    else if (m == 0)
     {
-        return CalcAckermann(n-1, 1);
+        return CalcAckermann(n - 1, 1);
     }
-    else{
-        int result = CalcAckermann(n-1, CalcAckermann(n, m-1));
+    else
+    {
+        int result = CalcAckermann(n - 1, CalcAckermann(n, m - 1));
         return result;
     }
 }
-int resultCalcAckermann = CalcAckermann(3,2);
+int resultCalcAckermann = CalcAckermann(3, 2);
 Console.WriteLine(resultCalcAckermann);
